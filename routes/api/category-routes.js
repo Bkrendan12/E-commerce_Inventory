@@ -17,15 +17,19 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-  let results = await Category.findByPk(req.params.id, {
-    include: [
-      {
-        model: Product,
-      },
-    ],
-  });
+  try {
+    let results = await Category.findByPk(req.params.id, {
+      include: [
+        {
+          model: Product,
+        },
+      ],
+    });
 
-  res.send(results);
+    res.send(results);
+  } catch (err) {
+    console.error(err);
+  }
   // be sure to include its associated Products
 });
 
@@ -39,23 +43,31 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  let results = await Category.update(req.body, {
-    where: {
-      id: req.params.id,
-    },
-  });
-  res.send(200, results);
+  try {
+    let results = await Category.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send(200, results);
+  } catch (err) {
+    console.error(err);
+  }
   // update a category by its `id` value
 });
 
 router.delete("/:id", async (req, res) => {
-  let results = await Category.destroy({
-    where: {
-      id: req.params.id,
-    },
-  });
-  res.send(200, results);
-  // delete a category by its `id` value
+  try {
+    // delete a category by its `id` value
+    let results = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send(200, results);
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 module.exports = router;

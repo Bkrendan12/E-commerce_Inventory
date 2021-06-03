@@ -6,13 +6,22 @@ const { Tag, Product, ProductTag } = require("../../models");
 router.get("/", async (req, res) => {
   // find all categories
   // be sure to include its associated Products
-  let results = await Tag.findAll();
-  res.send(results);
+  try {
+    let results = await Tag.findAll();
+    res.send(results);
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 router.get("/:id", async (req, res) => {
-  let results = await Tag.findByPk(req.params.id);
-  res.send(results);
+  try {
+    let results = await Tag.findByPk(req.params.id);
+    res.send(results);
+  } catch (err) {
+    console.error(err);
+  }
+
   // be sure to include its associated Products
 });
 
@@ -26,22 +35,31 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  let results = await Tag.update(req.body, {
-    where: {
-      id: req.params.id,
-    },
-  });
-  res.send(200, results);
+  try {
+    let results = await Tag.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send(200, results);
+  } catch (err) {
+    console.error(err);
+  }
+
   // update a Tag by its `id` value
 });
 
 router.delete("/:id", async (req, res) => {
-  let results = await Tag.destroy({
-    where: {
-      id: req.params.id,
-    },
-  });
-  res.send(200, results);
+  try {
+    let results = await Tag.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send(200, results);
+  } catch (err) {
+    console.error(err);
+  }
   // delete a Tag by its `id` value
 });
 
