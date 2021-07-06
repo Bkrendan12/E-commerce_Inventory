@@ -15,9 +15,6 @@ E-commerce_Inventory
 
 ## Screenshots for Application
 
-![homepage](https://user-images.githubusercontent.com/59030105/123862300-2dfc5c80-d8f6-11eb-85e9-0a74d7650822.png)
-![homepage](/Users/brendankurbkylo/Desktop/Homework/Homework13/imgs/insomnia.png)
-![homepage](imgs/insomnia.png)
 ![homepage](https://github.com/Bkrendan12/Homework13/blob/main/imgs/insomnia.png)
 
 ## Tech Used
