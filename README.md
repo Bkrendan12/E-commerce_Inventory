@@ -10,12 +10,11 @@ E-commerce_Inventory
 
 ## Link to Project Video Walk-through
 
-[Link-Application-video-walkthrough](https://www.youtube.com/watch?v=GPsV2MQvBpc)
-[Link-Application-video-walkthrough](https://youtu.be/GPsV2MQvBpc)
+[Application-Walkthrough](https://www.youtube.com/watch?v=GPsV2MQvBpc)
 
 ## Screenshots for Application
 
-![homepage](https://github.com/Bkrendan12/Homework13/blob/main/imgs/insomnia.png)
+![Insomnia-Demonstration](https://github.com/Bkrendan12/Homework13/blob/main/imgs/insomnia.png)
 
 ## Tech Used
 
@@ -28,20 +27,17 @@ I needed a way to keep track of all my products in my store inventory, so this a
 ## GIVEN a note-taking application
 
 ```
-WHEN I open the Music Genre Blog page
-THEN I am presented with a homepage with already created posts from other users
+WHEN I run the application from the command line terminal
+THEN I need to run 'npm run seed' to seed the sample data
 
-WHEN I click on the link to signup / login
-THEN I am presented with a login / singup page giving the user the option to either create a new profile or login if the user is already signed up
+WHEN I have seeded the sample data
+THEN I will run 'npm start' in the command line to start the server and use the application
 
-WHEN I am in my profile
-THEN I am able to add and delete blog posts to the main blog homepage
+WHEN the application starts the server
+THEN I will open up the Insomnia program to view and edit the seeded data
 
-WHEN I click on othe user's blog posts
-THEN I am able to add or delete comments to the user's post
-
-WHEN I click logout
-THEN I am automattically logged out and brought back to the homepage where I can only VIEW other people's posts, but I can't add or delete a post or comments on other user's posts
+WHEN I path to categories, products and tags in the input
+THEN I am able to view (GET), update (PUT), add (POST) and delete (DELETE) Categories/Products/Tags
 
 ```
 
